@@ -14,7 +14,7 @@ export const AudioStreamingTimePerDay = {
   options: {
     chartType: "bar",
   },
-};
+} as const;
 
 export const AudioStreamingDays = {
   stats: {
@@ -30,7 +30,7 @@ export const AudioStreamingDays = {
   options: {
     chartType: "bar",
   },
-};
+} as const;
 
 export const AudioStreamingEvents = {
   stats: {
@@ -45,7 +45,7 @@ export const AudioStreamingEvents = {
   options: {
     chartType: "bar",
   },
-};
+} as const;
 
 export const SpotifyListener = {
   stats: {
@@ -59,7 +59,7 @@ export const SpotifyListener = {
   options: {
     chartType: "pie",
   },
-};
+} as const;
 
 export const YouTubeMusicListener = {
   stats: {
@@ -73,7 +73,7 @@ export const YouTubeMusicListener = {
   options: {
     chartType: "pie",
   },
-};
+} as const;
 
 export const PandoraMusicListener = {
   stats: {
@@ -87,7 +87,7 @@ export const PandoraMusicListener = {
   options: {
     chartType: "pie",
   },
-};
+} as const;
 
 export const AmazonMusicListener = {
   stats: {
@@ -101,4 +101,4 @@ export const AmazonMusicListener = {
   options: {
     chartType: "pie",
   },
-};
+} as const;

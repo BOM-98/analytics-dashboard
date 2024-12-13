@@ -11,7 +11,7 @@ export const Genders = {
   options: {
     chartType: "pie",
   },
-};
+} as const;
 
 export const AgeCohorts = {
   stats: {
@@ -29,7 +29,7 @@ export const AgeCohorts = {
   options: {
     chartType: "bar",
   },
-};
+} as const;
 
 export const Regions = {
   stats: {
@@ -45,7 +45,7 @@ export const Regions = {
   options: {
     chartType: "pie",
   },
-};
+} as const;
 
 export const Education = {
   stats: {
@@ -68,7 +68,7 @@ export const Education = {
   options: {
     chartType: "bar",
   },
-};
+} as const;
 
 export const KidsInHousehold = {
   stats: {
@@ -86,7 +86,7 @@ export const KidsInHousehold = {
   options: {
     chartType: "bar",
   },
-};
+} as const;
 
 export const Ethnicity = {
   stats: {
@@ -103,7 +103,7 @@ export const Ethnicity = {
   options: {
     chartType: "bar",
   },
-};
+} as const;
 
 export const Hispanic = {
   stats: {
@@ -117,4 +117,4 @@ export const Hispanic = {
   options: {
     chartType: "pie",
   },
-};
+} as const;
