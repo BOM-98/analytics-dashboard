@@ -13,7 +13,7 @@ interface ChartDataItem {
 interface ChartCardProps {
   data: {
     stats: {
-      [key: string]: ChartDataItem[];
+      [key: string]: readonly ChartDataItem[];
     };
     title: string;
     description?: string;
