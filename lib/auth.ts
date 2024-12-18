@@ -44,8 +44,8 @@ export const authOptions: NextAuthOptions = {
           email: existingUser.email,
           firstName: existingUser.firstName,
           lastName: existingUser.lastName,
-          company: existingUser.company,
-          jobTitle: existingUser.jobTitle,
+          company: existingUser.company ?? "Not Provided",
+          jobTitle: existingUser.jobTitle ?? "Not Specified",
         };
       },
     }),

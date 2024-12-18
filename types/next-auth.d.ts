@@ -7,8 +7,8 @@ declare module "next-auth" {
     email: string;
     firstName: string;
     lastName: string;
-    company: string;
-    jobTitle: string;
+    company: string | null;
+    jobTitle: string | null;
   }
 
   interface JWT {
