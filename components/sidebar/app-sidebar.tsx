@@ -29,7 +29,7 @@ const data = {
       isActive: true,
       items: [
         { title: "Demographics", url: "/dashboard/demographics" },
-        { title: "Lifestyles", url: "#" },
+        { title: "Lifestyles", url: "/dashboard/lifestyles" },
       ],
     },
     {
@@ -38,7 +38,7 @@ const data = {
       icon: TvMinimalPlay,
       items: [
         { title: "Audio Streaming Habits", url: "/dashboard/audio-streaming-habits" },
-        { title: "Media Habits", url: "#" },
+        { title: "Media Habits", url: "/dashboard/media-habits" },
         { title: "Media Interests/Genres", url: "#" },
         { title: "Digital Habits", url: "#" },
         { title: "Social Media Usage", url: "#" },
