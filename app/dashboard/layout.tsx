@@ -20,13 +20,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const user = {
     name: session?.user?.name || null,
     email: session?.user?.email || null,
-    avatar: "/avatars/shadcn.jpg", // or dynamically if you have it
+    avatar: "/avatars/shadcn.jpg", //
   };
 
   const teams = {
-    name: session?.user?.company || null,
-    logo: session?.user?.logo || null,
-    plan: session?.user?.plan || null,
+    name: session?.user?.company || undefined,
+    logo: null,
+    plan: session?.user?.plan || undefined,
   };
 
   return (

@@ -21,9 +21,9 @@ export default async function Home() {
   };
 
   const teams = {
-    name: session?.user?.company || null,
-    logo: session?.user?.logo || null,
-    plan: session?.user?.plan || null,
+    name: session?.user?.company || undefined,
+    logo: null,
+    plan: session?.user?.plan || undefined,
   };
 
   return (
