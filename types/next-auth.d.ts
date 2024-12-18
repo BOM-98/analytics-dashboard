@@ -7,9 +7,18 @@ declare module "next-auth" {
   interface Session {
     user: User & {
       email: string;
+      firstName: string;
+      lastName: string;
+      company: string;
+      jobTitle: string;
     };
     token: {
       username: string;
+      email: string;
+      firstName: string;
+      lastName: string;
+      company: string;
+      jobTitle: string;
     };
   }
 }
