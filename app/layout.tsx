@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 import "@/app/globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import Provider from "@/components/providers/Provider";
+import Provider from "@/components/providers/provider";
 
 export const metadata = {
   title: "Auth Pages",
