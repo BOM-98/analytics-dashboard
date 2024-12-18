@@ -1,22 +1,21 @@
-import { cookies } from "next/headers";
-import { AppSidebar } from "@/components/sidebar/app-sidebar";
-import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
+// app/auth/layout.tsx
+import { ReactNode } from "react";
 import "@/app/globals.css";
+import { Toaster } from "@/components/ui/toaster";
+import Provider from "@/components/providers/Provider";
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar:state")?.value === "true";
+export const metadata = {
+  title: "Auth Pages",
+};
 
+export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="h-full">
-      <body className="h-full flex overflow-hidden">
-        <SidebarProvider defaultOpen={defaultOpen}>
-          <AppSidebar />
-          <main className="flex-1 flex flex-col bg-background overflow-hidden">
-            <SidebarTrigger />
-            <SidebarInset className="flex-1 overflow-y-auto w-full px-4">{children}</SidebarInset>
-          </main>
-        </SidebarProvider>
+    <html lang="en">
+      <body className="bg-white min-h-screen">
+        <Provider>
+          {children}
+          <Toaster />
+        </Provider>
       </body>
     </html>
   );

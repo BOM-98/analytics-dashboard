@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL") // Optional: used for direct connection in production if provided
+}
+
+model User {
+  id         Int      @id @default(autoincrement()) // Primary key with auto-increment
+  email      String  @unique                      // Required and unique email field
+  firstName  String                               // Required first name
+  lastName   String                               // Required last name
+  company    String?                                // Optional company name
+  jobTitle   String?                                // Optional job title
+  password   String                                // Required password
+  createdAt  DateTime @default(now())              // Automatically set to the current timestamp
+  updatedAt  DateTime @updatedAt                   // Automatically updates on record modification
+}

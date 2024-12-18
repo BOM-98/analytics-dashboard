@@ -2,7 +2,7 @@
 import { AdExposureOverview } from "@/components/charts/ad-exposure-overview";
 import { AdExposureChart } from "@/components/charts/ad-exposure-chart";
 import { AdEngagement } from "@/components/charts/ad-engagement";
-import { Genders, AgeCohorts, Regions, Education, KidsInHousehold, Ethnicity, Hispanic } from "../api/demographics";
+import { Genders, AgeCohorts, Regions, Education, KidsInHousehold, Ethnicity, Hispanic } from "@/app/api/demographics";
 import ChartCard from "@/components/charts/chart-card";
 
 export default function DemographicsPage() {

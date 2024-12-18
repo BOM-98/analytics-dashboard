@@ -1,22 +1,15 @@
 "use client";
 
+import { Sidebar, SidebarContent, SidebarSeparator, SidebarFooter, SidebarHeader } from "@/components/ui/sidebar";
+import { TeamSwitcher } from "@/components/sidebar/team-switcher";
+import { NavMain } from "@/components/sidebar/nav-main";
+import { NavUser } from "@/components/sidebar/nav-user";
+import { SearchForm } from "@/components/sidebar/search-form";
+
 import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarSeparator,
-} from "@/components/ui/sidebar";
-import {
+  GalleryVerticalEnd,
   AudioWaveform,
   Command,
-  GalleryVerticalEnd,
   UsersRound,
   TvMinimalPlay,
   ShoppingBag,
@@ -27,34 +20,7 @@ import {
   Puzzle,
 } from "lucide-react";
 
-import { TeamSwitcher } from "@/components/sidebar/team-switcher";
-import { NavMain } from "@/components/sidebar/nav-main";
-import { NavUser } from "@/components/sidebar/nav-user";
-import { SearchForm } from "@/components/sidebar/search-form";
-
 const data = {
-  user: {
-    name: "Brian O'Mahony",
-    email: "brian@qriousinsight.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
-  teams: [
-    {
-      name: "Qrious Insight",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
   navMain: [
     {
       title: "Demos & Attributes",
@@ -62,14 +28,8 @@ const data = {
       icon: UsersRound,
       isActive: true,
       items: [
-        {
-          title: "Demographics",
-          url: "/demographics",
-        },
-        {
-          title: "Lifestyles",
-          url: "#",
-        },
+        { title: "Demographics", url: "/dashboard/demographics" },
+        { title: "Lifestyles", url: "#" },
       ],
     },
     {
@@ -77,30 +37,12 @@ const data = {
       url: "#",
       icon: TvMinimalPlay,
       items: [
-        {
-          title: "Audio Streaming Habits",
-          url: "/audio-streaming-habits",
-        },
-        {
-          title: "Media Habits",
-          url: "#",
-        },
-        {
-          title: "Media Interests/Genres",
-          url: "#",
-        },
-        {
-          title: "Digital Habits",
-          url: "#",
-        },
-        {
-          title: "Social Media Usage",
-          url: "#",
-        },
-        {
-          title: "News",
-          url: "#",
-        },
+        { title: "Audio Streaming Habits", url: "/dashboard/audio-streaming-habits" },
+        { title: "Media Habits", url: "#" },
+        { title: "Media Interests/Genres", url: "#" },
+        { title: "Digital Habits", url: "#" },
+        { title: "Social Media Usage", url: "#" },
+        { title: "News", url: "#" },
       ],
     },
     {
@@ -108,18 +50,9 @@ const data = {
       url: "#",
       icon: ShoppingBag,
       items: [
-        {
-          title: "Convenience Stores",
-          url: "#",
-        },
-        {
-          title: "Retail Shopping Store Type",
-          url: "#",
-        },
-        {
-          title: "DIY/Home Improvement",
-          url: "#",
-        },
+        { title: "Convenience Stores", url: "#" },
+        { title: "Retail Shopping Store Type", url: "#" },
+        { title: "DIY/Home Improvement", url: "#" },
       ],
     },
     {
@@ -127,22 +60,10 @@ const data = {
       url: "#",
       icon: ShoppingBasket,
       items: [
-        {
-          title: "Grocery Habits",
-          url: "#",
-        },
-        {
-          title: "Grocery Retailers",
-          url: "#",
-        },
-        {
-          title: "Dining Behaviors",
-          url: "#",
-        },
-        {
-          title: "Dining QSR Brands",
-          url: "#",
-        },
+        { title: "Grocery Habits", url: "#" },
+        { title: "Grocery Retailers", url: "#" },
+        { title: "Dining Behaviors", url: "#" },
+        { title: "Dining QSR Brands", url: "#" },
       ],
     },
     {
@@ -150,18 +71,9 @@ const data = {
       url: "#",
       icon: Wallet,
       items: [
-        {
-          title: "Financial",
-          url: "#",
-        },
-        {
-          title: "Insurance",
-          url: "#",
-        },
-        {
-          title: "Automotive",
-          url: "#",
-        },
+        { title: "Financial", url: "#" },
+        { title: "Insurance", url: "#" },
+        { title: "Automotive", url: "#" },
       ],
     },
     {
@@ -169,34 +81,13 @@ const data = {
       url: "#",
       icon: BookOpenText,
       items: [
-        {
-          title: "Books, Magazines, Blogs, & Reading",
-          url: "#",
-        },
-        {
-          title: "Hobbies/Interests",
-          url: "#",
-        },
-        {
-          title: "Home",
-          url: "#",
-        },
-        {
-          title: "Pets",
-          url: "#",
-        },
-        {
-          title: "Sports",
-          url: "#",
-        },
-        {
-          title: "Technology",
-          url: "#",
-        },
-        {
-          title: "Travel",
-          url: "#",
-        },
+        { title: "Books, Magazines, Blogs, & Reading", url: "#" },
+        { title: "Hobbies/Interests", url: "#" },
+        { title: "Home", url: "#" },
+        { title: "Pets", url: "#" },
+        { title: "Sports", url: "#" },
+        { title: "Technology", url: "#" },
+        { title: "Travel", url: "#" },
       ],
     },
     {
@@ -204,14 +95,8 @@ const data = {
       url: "#",
       icon: Activity,
       items: [
-        {
-          title: "Pharmaceuticals",
-          url: "#",
-        },
-        {
-          title: "Nutrition & Diet",
-          url: "#",
-        },
+        { title: "Pharmaceuticals", url: "#" },
+        { title: "Nutrition & Diet", url: "#" },
       ],
     },
     {
@@ -219,24 +104,39 @@ const data = {
       url: "#",
       icon: Puzzle,
       items: [
-        {
-          title: "Philanthropy",
-          url: "#",
-        },
-        {
-          title: "Seasonal",
-          url: "#",
-        },
+        { title: "Philanthropy", url: "#" },
+        { title: "Seasonal", url: "#" },
       ],
     },
   ],
 };
 
-export function AppSidebar() {
+interface AppSidebarProps {
+  user: {
+    name?: string | null;
+    email?: string | null;
+    avatar?: string;
+  };
+  teams: {
+    name?: string;
+    logo: React.ElementType | null;
+    plan?: string;
+  };
+}
+
+export function AppSidebar({ user, teams }: AppSidebarProps) {
   return (
     <Sidebar variant="floating" collapsible="icon">
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <TeamSwitcher
+          teams={[
+            {
+              name: teams?.name ?? "Guest Team",
+              logo: teams?.logo ?? GalleryVerticalEnd,
+              plan: teams?.plan ?? "Free",
+            },
+          ]}
+        />
       </SidebarHeader>
       <SidebarSeparator />
       <SidebarContent>
@@ -244,7 +144,13 @@ export function AppSidebar() {
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser
+          user={{
+            name: user?.name ?? "Guest User",
+            email: user?.email ?? "guest@example.com",
+            avatar: user?.avatar ?? "/avatars/shadcn.jpg",
+          }}
+        />
       </SidebarFooter>
     </Sidebar>
   );

@@ -8,7 +8,7 @@ import {
   YouTubeMusicListener,
   PandoraMusicListener,
   AmazonMusicListener,
-} from "../api/audio-streaming-habits";
+} from "@/app/api/audio-streaming-habits";
 
 export default function AudioStreamingHabitsPage() {
   return (
