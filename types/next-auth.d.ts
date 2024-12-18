@@ -11,6 +11,8 @@ declare module "next-auth" {
       lastName: string;
       company: string;
       jobTitle: string;
+      logo: string;
+      plan: string;
     };
     token: {
       username: string;
